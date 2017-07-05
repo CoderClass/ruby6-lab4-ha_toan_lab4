@@ -1,0 +1,12 @@
+
+<div class="card">
+  <div class="card-header">
+    <%= @room.name %>
+  </div>
+  <div class="card-block">
+    <% @room.messages.each do |message| %>
+      <p class="card-text"><span class="badge badge-primary"><%= message.username %>:</span> <%= message.content %> </p>
+    <% end %>
+  </div>
+</div>
+<%= render "form", room: @room, message: @room.messages.build %>

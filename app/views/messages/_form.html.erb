@@ -1,0 +1,11 @@
+<%= form_for [room, message] do |f| %>
+  <div class="form-group">
+    <%= f.label :username %>
+    <%= f.text_field :username, class: "form-control" %>  
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <%= f.text_area :content, class: "form-control" %>  
+  </div>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
