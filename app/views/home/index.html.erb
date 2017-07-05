@@ -4,3 +4,9 @@
 <ul class="list-group">
   <%= render @rooms %>
 </ul>
+
+<%= form_for(Room.new) do |f| %>
+  <%= f.text_field :name, class: 'form-control', placeholder: 'Create new room' %>
+  <%= submit_tag "Create", class: 'btn btn-primary' %>
+<% end %>
+  
