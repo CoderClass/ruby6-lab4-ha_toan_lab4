@@ -5,8 +5,8 @@
   <%= render @rooms %>
 </ul>
 
-<%= form_for(Room.new) do |f| %>
-  <%= f.text_field :name, class: 'form-control', placeholder: 'Create new room' %>
+<%= form_for Room.new, html: {class: "form-inline mt-3"} do |f| %>
+  <%= f.text_field :name, class: 'form-control mr-2', placeholder: 'Create new room' %>
   <%= submit_tag "Create", class: 'btn btn-primary' %>
 <% end %>
-  
+

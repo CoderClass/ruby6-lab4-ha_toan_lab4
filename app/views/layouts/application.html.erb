@@ -24,13 +24,13 @@
           </div>
         </li>
         <li class="nav-item">
-          <% if current_user.present? %>
+          <% unless current_user.present? %>
             <%= form_tag(login_path, class: "form-inline") do %>
               <%= text_field_tag :username, nil, placeholder: "Enter username", class: "form-control mr-2" %>
               <%= submit_tag "Log In", class: "btn btn-primary" %>
             <% end %>
-          <% elsif %>
-            <%= link_to "Log out", logout_path, method: 'delete' %>
+          <% else %>
+            <%= link_to "Log out", logout_path, {method: 'delete', class: 'btn btn-primary'} %>
           <% end %>
         </li>
       </ul>
