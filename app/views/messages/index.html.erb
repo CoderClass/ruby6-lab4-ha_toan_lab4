@@ -8,5 +8,7 @@
       <p class="card-text"><span class="badge badge-primary"><%= message.username %>:</span> <%= message.content %> </p>
     <% end %>
   </div>
+  <div class="card-footer">
+    <%= render "form", room: @room, message: @room.messages.build %>
+  </div>
 </div>
-<%= render "form", room: @room, message: @room.messages.build %>
