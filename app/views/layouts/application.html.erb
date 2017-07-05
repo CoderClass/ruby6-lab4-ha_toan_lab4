@@ -30,6 +30,7 @@
               <%= submit_tag "Log In", class: "btn btn-primary" %>
             <% end %>
           <% else %>
+            Hello, <%= current_user %>
             <%= link_to "Log out", logout_path, {method: 'delete', class: 'btn btn-primary'} %>
           <% end %>
         </li>
